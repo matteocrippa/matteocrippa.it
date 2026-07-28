@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Veloxiraptor</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;max-width:720px;margin:0 auto;padding:2rem 1rem;color:#333}
+h1{font-size:1.5rem;margin-bottom:0.25rem}
+h2{font-size:1.2rem;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+th,td{border:1px solid #ddd;padding:.5rem;text-align:left}
+th{background:#f5f5f5}
+hr{border:none;border-top:1px solid #ddd;margin:2rem 0}
+footer{font-size:.85rem;color:#666;margin-top:2rem}
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p><em>Last updated: July 28, 2026</em></p>
+
+<h2>Introduction</h2>
+<p>Veloxiraptor (the "App") is developed and operated by Matteo Crippa ("we", "us", "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+<p>The App provides speed camera proximity alerts using your device's GPS location. <strong>Privacy is a core design principle</strong> — the App is built to be entirely anonymous and processes all sensitive data on-device.</p>
+<p>By using the App, you agree to the collection and use of information in accordance with this policy.</p>
+
+<h2>Information We Collect</h2>
+
+<h3>Location Data</h3>
+<p>The App uses your device's precise GPS location to determine your proximity to speed cameras and provide audio/video alerts. Location processing happens <strong>entirely on your device</strong>:</p>
+<ul>
+<li>Your GPS coordinates are compared against a local SQLite database of speed camera locations stored on your device</li>
+<li>Coordinates are <strong>never transmitted</strong> off your device</li>
+<li>No location data is sent to any server or third party</li>
+</ul>
+<p>The App may request <strong>"Always" location access</strong> so alerts can be delivered while the App is in the background or when your device is locked. You can change this permission at any time in your device Settings.</p>
+<p>A best-effort last-known location (latitude, longitude, speed) is persisted in a shared App Group container (<code>group.com.veloxiraptor.ios</code>) solely so the widget, Live Activity, and CarPlay extension can display nearby camera information. This data never leaves your device.</p>
+
+<h3>Information Collected Automatically</h3>
+<p><strong>We do not collect any analytics, crash reports, usage statistics, or telemetry.</strong> The App has no tracking mechanisms, no analytics SDKs, and no crash reporting framework.</p>
+
+<h3>Information We Do NOT Collect</h3>
+<p>We do <strong>not</strong> collect, store, or share:</p>
+<ul>
+<li>Name, email, phone number, or any contact information</li>
+<li>Device identifiers (IDFA, advertising ID, vendor ID, etc.)</li>
+<li>Browsing history or behavioral data</li>
+<li>Payment or financial information</li>
+<li>Account credentials — the App does not require an account, sign-in, or registration</li>
+<li>Photos, contacts, calendar, or media</li>
+<li>Health or biometric data</li>
+</ul>
+
+<h2>How We Use Your Information</h2>
+<ul>
+<li>To display your position on the map and determine distance to nearby speed cameras</li>
+<li>To provide audible and visual alerts when approaching a speed camera</li>
+<li>To display trip statistics (distance, duration, max speed, cameras passed) — all ephemeral and discarded after viewing</li>
+<li>To provide a widget, Live Activity, and CarPlay interface showing nearby camera information</li>
+</ul>
+
+<h2>Legal Basis for Processing</h2>
+<p>Under the General Data Protection Regulation (GDPR), we process your personal information on the following legal basis:</p>
+<ul>
+<li><strong>Consent</strong> — We access your device's precise location only after you grant explicit permission through the iOS location permissions dialog. You may withdraw consent at any time by changing location permissions in your device Settings.</li>
+</ul>
+<p>Your location is processed <strong>entirely on-device</strong>. No location data is transmitted to us or any third party, so no other legal basis for processing applies.</p>
+
+<h2>How We Share Your Information</h2>
+<p><strong>We do not sell, trade, or share your personal information with anyone.</strong></p>
+<p>The only network request the App makes is to download a <strong>static, public speed camera database</strong> from the <a href="https://github.com/matteocrippa/veloxiraptor-artifact">veloxiraptor-artifact</a> GitHub repository. This request includes only standard HTTP headers (IP address, user agent) inherent to the network connection. No device identifier, location data, or personal information is included in or derivable from this request.</p>
+<ul>
+<li><strong>Service Providers:</strong> The App has no backend services, no APIs, and no service providers that receive user data. The downloaded database is a static public file hosted on GitHub Releases.</li>
+<li><strong>Legal Compliance:</strong> We may disclose information only if required to do so by law or in response to valid legal process.</li>
+<li><strong>Business Transfers:</strong> In the unlikely event of a merger, acquisition, or sale of assets, user data would not be transferred because no user data is collected.</li>
+</ul>
+
+<h2>Third-Party Services</h2>
+<p><strong>The App contains no third-party SDKs, frameworks, or services that process user data.</strong> Specifically:</p>
+<ul>
+<li>No analytics (Google Analytics, Firebase Analytics, Amplitude, Mixpanel, etc.)</li>
+<li>No crash reporting (Sentry, Crashlytics, etc.)</li>
+<li>No advertising (AdMob, etc.)</li>
+<li>No social media SDKs</li>
+<li>No payment processors</li>
+<li>No push notification services — all notifications are local, generated on-device</li>
+<li>No remote configuration or A/B testing frameworks</li>
+</ul>
+<p><strong>Apple Services:</strong> When using CarPlay, Apple Maps may be launched for navigation. Apple's use of information collected during navigation is governed by Apple's Privacy Policy.</p>
+<p><strong>Data Source Attribution:</strong> Speed camera data originates from <a href="https://www.openstreetmap.org/">OpenStreetMap</a> (OSM) and is used under the <a href="https://opendatacommons.org/licenses/odbl/">Open Database License (ODbL)</a>. The data is publicly available and does not contain personal information.</p>
+
+<h2>Cookies and Tracking Technologies</h2>
+<p>The App does not use cookies or any form of tracking technology. There are no web views, no cookie storage, and no fingerprinting mechanisms.</p>
+
+<h2>Data Security</h2>
+<p>All data processing is performed locally on your device. We implement the following measures to protect your information:</p>
+<ul>
+<li><strong>On-device processing:</strong> Location data is processed locally and never transmitted</li>
+<li><strong>Encrypted network request:</strong> The single database download uses HTTPS</li>
+<li><strong>App Sandbox:</strong> iOS sandboxing prevents unauthorized access by other applications</li>
+<li><strong>Data minimization:</strong> Only the minimum data necessary (GPS coordinates) is accessed, and only while the App is actively monitoring</li>
+</ul>
+<p>No system is 100% secure, but because no personal data leaves your device, there is no server-side data to breach.</p>
+
+<h2>Data Retention</h2>
+<p>All app data is stored locally on your device and is removed when you uninstall the App:</p>
+<table>
+<thead>
+<tr><th>Data</th><th>Storage</th><th>Retention</th></tr>
+</thead>
+<tbody>
+<tr><td>Speed camera database</td><td>Local SQLite file (<code>active.db</code>) in App Group container</td><td>Replaced on next database download; removed on uninstall</td></tr>
+<tr><td>Monitoring state</td><td>UserDefaults (App Group)</td><td>Until changed; removed on uninstall</td></tr>
+<tr><td>Selected country</td><td>UserDefaults (App Group)</td><td>Until changed; removed on uninstall</td></tr>
+<tr><td>Last known location</td><td>UserDefaults (App Group)</td><td>Updated continuously; removed on uninstall</td></tr>
+<tr><td>Last database update date</td><td>UserDefaults (App Group)</td><td>Until next update; removed on uninstall</td></tr>
+<tr><td>Onboarding completion</td><td>UserDefaults (App Group)</td><td>Until reset; removed on uninstall</td></tr>
+<tr><td>Trip statistics</td><td>In-memory</td><td>Discarded after trip summary is displayed</td></tr>
+</tbody>
+</table>
+
+<h2>Your Rights</h2>
+<p>Under GDPR and applicable privacy laws, you have the following rights:</p>
+<ul>
+<li><strong>Withdraw consent</strong> — Change or revoke location permissions at any time in iOS Settings &gt; Privacy &gt; Location Services &gt; Veloxiraptor. This is the primary control available to you.</li>
+<li><strong>Access, correction, deletion, portability</strong> — Since we store no personal data on our servers, there is no data to access, correct, delete, or export. All data resides on your device and is removed when you uninstall the App.</li>
+<li><strong>Restrict processing</strong> — Deny location permissions for the App in your device settings, or use the App in a mode without monitoring enabled.</li>
+<li><strong>Object</strong> — You may object to processing by ceasing use of the App.</li>
+<li><strong>Lodge a complaint</strong> — You have the right to lodge a complaint with your local data protection authority if you believe your rights have been violated.</li>
+</ul>
+<p>To exercise any of these rights, contact us using the information below. We will respond within the timeframe required by applicable law.</p>
+
+<h2>International Data Transfers</h2>
+<p>No personal data is transferred across borders because no personal data leaves your device. The only network request downloads a static public file from GitHub, which may be served from anywhere in GitHub's global CDN.</p>
+
+<h2>Children's Privacy</h2>
+<p>The App is not intended for children under 13 (or the applicable age threshold in your jurisdiction). We do not knowingly collect any personal information from children — in fact, we do not collect personal information from any user regardless of age.</p>
+
+<h2>Changes to This Privacy Policy</h2>
+<p>We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date. For material changes, we may provide additional notice through the application or on our website.</p>
+
+<h2>Governing Law</h2>
+<p>This policy is governed by the laws of Italy. The following privacy laws apply to our processing of your data:</p>
+<ul>
+<li>General Data Protection Regulation (GDPR) — European Union</li>
+<li>ePrivacy Directive — European Union</li>
+</ul>
+<p>Jurisdiction-specific rights (CCPA, CPRA, etc.) for users outside the EU are acknowledged; however, because we collect no personal data, no additional compliance measures are triggered.</p>
+
+<h2>Contact Us</h2>
+<ul>
+<li><strong>Web form:</strong> <a href="https://tally.so/r/lbXAE5">https://tally.so/r/lbXAE5</a></li>
+<li><strong>Developer:</strong> Matteo Crippa</li>
+</ul>
+<p>For questions about this privacy policy or your data, please use the contact form above.</p>
+
+<hr>
+<footer><em>This policy is provided for informational purposes and does not constitute legal advice. Consult a qualified attorney for advice specific to your jurisdiction.</em></footer>
+
+</body>
+</html>
