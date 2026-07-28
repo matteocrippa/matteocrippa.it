@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - VoltMinder</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;max-width:720px;margin:0 auto;padding:2rem 1rem;color:#333}
+h1{font-size:1.5rem;margin-bottom:0.25rem}
+h2{font-size:1.2rem;margin-top:2rem}
+h3{font-size:1rem;margin-top:1.5rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+th,td{border:1px solid #ddd;padding:.5rem;text-align:left}
+th{background:#f5f5f5}
+hr{border:none;border-top:1px solid #ddd;margin:2rem 0}
+footer{font-size:.85rem;color:#666;margin-top:2rem}
+code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px;font-size:.9em}
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p><em>Last updated: July 28, 2026</em></p>
+
+<h2>Introduction</h2>
+<p>VoltMinder (the "App") is developed and operated by Matteo Crippa ("we", "us", "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+<p>The App provides live EV battery telemetry monitoring on your iPhone and CarPlay, connecting to your vehicle via a Bluetooth ELM327 OBD-II adapter. <strong>Privacy is a core design principle</strong> — the App processes all sensitive data on-device by default, and any data sharing is opt-in.</p>
+<p>By using the App, you agree to the collection and use of information in accordance with this policy.</p>
+
+<h2>Information We Collect</h2>
+
+<h3>Location Data</h3>
+<p>The App uses your device's GPS location to calculate ETA, show nearby charging stations, and estimate arrival State of Charge during navigation. Location processing happens <strong>entirely on your device</strong>:</p>
+<ul>
+<li>Your GPS coordinates are used locally to query nearby charging points from Open Charge Map and calculate route information via Apple MapKit</li>
+<li>Coordinates are <strong>never transmitted</strong> to any VoltMinder-operated server</li>
+<li>No location data is stored on any backend</li>
+</ul>
+<p>Location is accessed using <strong>"When In Use"</strong> permission only.</p>
+
+<h3>Bluetooth Data</h3>
+<p>The App uses Bluetooth Low Energy (BLE) to communicate with an ELM327 OBD-II adapter connected to your vehicle's OBD2 port. This connection streams live battery telemetry (State of Charge, voltage, current, temperatures, etc.) to your iPhone:</p>
+<ul>
+<li>Bluetooth communication occurs <strong>entirely on your device</strong> — between your iPhone and the OBD-II adapter</li>
+<li>No vehicle telemetry data is transmitted to any server by default</li>
+<li>The paired dongle's identifier is stored locally for automatic reconnection</li>
+</ul>
+
+<h3>Calendar Data (Optional)</h3>
+<p>If you grant Calendar access, the App may infer how long you will stay at a destination to help plan charging stops. This data is processed <strong>locally on your device</strong>:</p>
+<ul>
+<li>Calendar event durations are read solely to estimate parking duration</li>
+<li>Calendar data is <strong>never transmitted</strong> off your device</li>
+<li>You can deny Calendar access and the App remains fully functional</li>
+</ul>
+
+<h3>Siri / App Intents</h3>
+<p>The App integrates with Siri so you can start battery-aware navigation using voice commands. When you use Siri, Apple processes your voice input according to Apple's Privacy Policy. VoltMinder receives only the resolved destination.</p>
+
+<h3>Information We Do NOT Collect</h3>
+<p>We do <strong>not</strong> collect, store, or share:</p>
+<ul>
+<li>Name, email, phone number, or any contact information</li>
+<li>Device identifiers (IDFA, advertising ID, vendor ID, etc.)</li>
+<li>Browsing history or behavioral data</li>
+<li>Payment or financial information — all StoreKit transactions are processed by Apple</li>
+<li>Account credentials — the App does not require an account, sign-in, or registration</li>
+<li>Photos, contacts (except Calendar, as described above), or media</li>
+<li>Health or biometric data</li>
+<li>Usage analytics, crash reports, or telemetry</li>
+</ul>
+
+<h2>How We Use Your Information</h2>
+<ul>
+<li>To connect to your vehicle via Bluetooth and display live battery telemetry</li>
+<li>To display your position on the map and find nearby charging stations</li>
+<li>To calculate route energy consumption and suggest charging stops</li>
+<li>To provide CarPlay Dashboard widgets and a full-screen HUD with battery metrics</li>
+<li>To log trips locally for efficiency analytics</li>
+<li>To send local notifications when battery State of Charge drops below a threshold you configure</li>
+<li>To provide Siri voice control for battery queries and navigation (optional)</li>
+</ul>
+
+<h2>Legal Basis for Processing</h2>
+<p>Under the General Data Protection Regulation (GDPR), we process your personal information on the following legal bases:</p>
+<ul>
+<li><strong>Consent</strong> — We access your device's location only after you grant explicit permission through the iOS location permissions dialog. We access Calendar only after you grant explicit permission. You may withdraw consent at any time by changing permissions in your device Settings.</li>
+<li><strong>Legitimate Interest</strong> — Bluetooth communication with your OBD-II adapter is necessary for the core functionality of the App. No consent is required for local BLE communication, as it does not involve processing of personal data by us.</li>
+</ul>
+<p>Your vehicle telemetry and location are processed <strong>entirely on-device</strong>. No data is transmitted to us or any third party by default, so no other legal basis for processing applies.</p>
+
+<h2>How We Share Your Information</h2>
+<p><strong>We do not sell, trade, or share your personal information with anyone.</strong> By default, no data leaves your device.</p>
+
+<h3>Opt-In Data Sharing</h3>
+<p>You may choose to enable the following optional features, each of which involves data leaving your device:</p>
+
+<p><strong>1. iCloud Family Sharing (CloudKit)</strong> — If you purchase the Family Plan and opt into sharing, computed trip logs are synced across family members via Apple's CloudKit using end-to-end encryption. Only computed <code>TripLog</code> records (distance, efficiency, SoC range, temperatures) are synced. Apple manages the encryption — VoltMinder cannot read your family's data.</p>
+
+<p><strong>2. EVNotify Integration</strong> — If you explicitly enable EVNotify upload and provide your credentials (akey/token), the App sends telemetry data (SoC, SoH, power, voltage, current) to EVNotify's servers (<code>https://evnotify.de</code>). This is <strong>opt-in</strong> and <strong>off by default</strong>.</p>
+
+<p><strong>3. Leaderboard</strong> — If you opt in, anonymous efficiency data (Wh/km, vehicle ID, a randomly generated driver UUID) is sent to our Cloudflare Workers API. No personal identifiers are included. You can delete your leaderboard entry at any time via Settings.</p>
+
+<p><strong>4. Community Profiles &amp; Charge Curves</strong> — If you submit a community profile or charge curve, the vehicle data you provide is sent to our Cloudflare Workers API. No personal data is included in submissions.</p>
+
+<h3>Third-Party Services</h3>
+<table>
+<thead>
+<tr><th>Service</th><th>Purpose</th><th>Data Sent</th></tr>
+</thead>
+<tbody>
+<tr><td>Cloudflare Workers (Hono/D1)</td><td>Vehicle profile catalog, community features, leaderboard</td><td>None by default; only opt-in leaderboard/community submissions</td></tr>
+<tr><td>Supabase (Postgres)</td><td>Read-only CDN for anonymous vehicle PID formulas</td><td>None — reads only public data</td></tr>
+<tr><td>Open Charge Map (<code>api.openchargemap.io</code>)</td><td>Find nearby charging stations</td><td>Your approximate coordinates (lat/lon), search radius</td></tr>
+<tr><td>Open-Meteo (<code>api.open-meteo.com</code>)</td><td>Ambient temperature and elevation for consumption forecasting</td><td>Coordinates, no identifiers</td></tr>
+<tr><td>Overpass API (OpenStreetMap)</td><td>Find POIs near charging stops</td><td>Coordinates of charging stop</td></tr>
+<tr><td>Apple MapKit</td><td>Route calculation and directions</td><td>Start/end addresses (resolved on-device)</td></tr>
+<tr><td>Apple CloudKit</td><td>Optional family sync</td><td>TripLog records (opt-in, end-to-end encrypted)</td></tr>
+<tr><td>Apple WeatherKit</td><td>Ambient temperature for consumption forecasting</td><td>Coordinates (resolved on-device)</td></tr>
+<tr><td>Apple StoreKit</td><td>In-app purchases (Family Plan)</td><td>Transaction data (handled entirely by Apple)</td></tr>
+</tbody>
+</table>
+
+<p><strong>The App contains no third-party analytics, crash reporting, advertising, or tracking SDKs.</strong> Specifically: no Firebase, no Sentry, no Crashlytics, no Google Analytics, no Amplitude, no Mixpanel, no AdMob, no social media SDKs, no payment processors (StoreKit is Apple), no remote push notifications (all notifications are local), and no remote configuration or A/B testing frameworks.</p>
+
+<h3>External Dependencies</h3>
+<p>The App uses the following open-source Swift packages for technical functionality only — none of them collect, transmit, or process user data:</p>
+<ul>
+<li><strong>AsyncBluetooth</strong> — Modern async/await CoreBluetooth wrapper for BLE communication</li>
+<li><strong>swift-clocks</strong> — Time testing utilities (development only)</li>
+<li><strong>swift-concurrency-extras</strong> — Swift concurrency helpers</li>
+<li><strong>xctest-dynamic-overlay</strong> — Test overlay utilities (development only)</li>
+</ul>
+
+<h3>Legal Compliance</h3>
+<p>We may disclose information only if required to do so by law or in response to valid legal process. In the unlikely event of a merger, acquisition, or sale of assets, user data would not be transferred because we do not collect user data on any backend.</p>
+
+<h2>Cookies and Tracking Technologies</h2>
+<p>The App does not use cookies or any form of tracking technology. There are no web views, no cookie storage, and no fingerprinting mechanisms.</p>
+
+<h2>Data Security</h2>
+<p>All data processing is performed locally on your device. We implement the following measures to protect your information:</p>
+<ul>
+<li><strong>On-device processing:</strong> Vehicle telemetry, location, and calendar data are processed locally and never transmitted by default</li>
+<li><strong>Encrypted network requests:</strong> All network requests use HTTPS</li>
+<li><strong>App Sandbox:</strong> iOS sandboxing prevents unauthorized access by other applications</li>
+<li><strong>Data minimization:</strong> Only the minimum data necessary for each feature is accessed</li>
+<li><strong>End-to-end encryption:</strong> CloudKit family sync uses Apple's end-to-end encryption</li>
+<li><strong>No backend storage:</strong> We operate no database of user data</li>
+</ul>
+<p>No system is 100% secure, but because no personal data leaves your device by default, there is no server-side data to breach.</p>
+
+<h2>Data Retention</h2>
+<p>All app data is stored locally on your device using SwiftData (Apple's on-device persistence framework backed by SQLite):</p>
+<table>
+<thead>
+<tr><th>Data</th><th>Storage</th><th>Retention</th></tr>
+</thead>
+<tbody>
+<tr><td>Vehicle telemetry snapshots (<code>StoredTelemetryRecord</code>)</td><td>Local SwiftData</td><td>Deleted after trip finalization; orphaned records &gt; 24h purged on next launch</td></tr>
+<tr><td>Trip logs (<code>TripLog</code>)</td><td>Local SwiftData</td><td>Retained indefinitely on-device — user can delete via Settings</td></tr>
+<tr><td>Vehicle profile cache</td><td>Local SwiftData</td><td>Updated on differential sync; cached until next update</td></tr>
+<tr><td>Dongle pairing info</td><td>UserDefaults / AccessorySetupKit</td><td>Until removed via Settings or uninstall</td></tr>
+<tr><td>Live Activity / Widget state</td><td>App Group container</td><td>Ephemeral — updated continuously</td></tr>
+<tr><td>iCloud synced trip logs</td><td>Apple CloudKit (opt-in)</td><td>As long as the shared iCloud zone exists; family member can remove own data</td></tr>
+<tr><td>Leaderboard entries</td><td>Cloudflare D1 (opt-in)</td><td>Until user deletes via Settings</td></tr>
+<tr><td>Community profile submissions</td><td>Cloudflare D1 (opt-in)</td><td>Until user requests removal via contact form</td></tr>
+</tbody>
+</table>
+<p><strong>All local data is removed when you delete the App</strong> (except iCloud data, which must be removed separately via iCloud settings).</p>
+
+<h2>Your Rights</h2>
+<p>Under GDPR and applicable privacy laws, you have the following rights:</p>
+<ul>
+<li><strong>Withdraw consent</strong> — Change or revoke location/calendar permissions at any time in iOS Settings &gt; Privacy &amp; Security &gt; Location Services / Calendars &gt; VoltMinder</li>
+<li><strong>Access, correction, deletion, portability</strong> — Since we store no personal data on our servers, there is no data to access, correct, delete, or export. All data resides on your device and is removed when you uninstall the App. For opt-in data (leaderboard, community submissions), use the in-app deletion option or contact us</li>
+<li><strong>Restrict processing</strong> — Deny location/calendar permissions or use the App without those features enabled</li>
+<li><strong>Object</strong> — You may object to processing by ceasing use of the App</li>
+<li><strong>Lodge a complaint</strong> — You have the right to lodge a complaint with your local data protection authority if you believe your rights have been violated</li>
+</ul>
+<p>To exercise any of these rights, contact us using the information below. We will respond within the timeframe required by applicable law.</p>
+
+<h2>International Data Transfers</h2>
+<p>No personal data is transferred across borders by default. If you opt into:</p>
+<ul>
+<li><strong>iCloud Family Sharing:</strong> Data is stored in Apple's CloudKit infrastructure, which may be located in various regions worldwide. Apple's DPF certification governs these transfers.</li>
+<li><strong>EVNotify:</strong> Data is sent to EVNotify's servers (located in Germany per their documentation).</li>
+<li><strong>Cloudflare Workers / Supabase:</strong> Data may be processed in Cloudflare's or Supabase's global infrastructure.</li>
+</ul>
+<p>In all cases, international transfers are governed by the EU Standard Contractual Clauses (SCCs) or the Data Privacy Framework (DPF), as applicable to each provider.</p>
+
+<h2>Children's Privacy</h2>
+<p>The App is not intended for children under 13 (or the applicable age threshold in your jurisdiction). We do not knowingly collect any personal information from children — in fact, we do not collect personal information from any user regardless of age.</p>
+
+<h2>Apple Privacy Manifest</h2>
+<p>The App includes a <code>PrivacyInfo.xcprivacy</code> file that declares:</p>
+<ul>
+<li><strong>No tracking</strong> (<code>NSPrivacyTracking: false</code>)</li>
+<li><strong>No collected data types</strong></li>
+<li><strong>No tracking domains</strong></li>
+<li><strong>Required API reasons only:</strong> file timestamp access (C617.1), system boot time access (35F9.1), disk space access (E174.1)</li>
+</ul>
+
+<h2>Changes to This Privacy Policy</h2>
+<p>We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date. For material changes, we may provide additional notice through the application.</p>
+
+<h2>Governing Law</h2>
+<p>This policy is governed by the laws of Italy. The following privacy laws apply to our processing of your data:</p>
+<ul>
+<li>General Data Protection Regulation (GDPR) — European Union</li>
+<li>ePrivacy Directive — European Union</li>
+</ul>
+<p>Jurisdiction-specific rights (CCPA, CPRA, etc.) for users outside the EU are acknowledged; however, because we collect no personal data, no additional compliance measures are triggered.</p>
+
+<h2>Contact Us</h2>
+<ul>
+<li><strong>Web form:</strong> <a href="https://tally.so/r/lbXAE5">https://tally.so/r/lbXAE5</a></li>
+<li><strong>Hosted policy:</strong> <a href="https://matteocrippa.it/privacy-policy/voltminder">https://matteocrippa.it/privacy-policy/voltminder</a></li>
+<li><strong>Developer:</strong> Matteo Crippa</li>
+</ul>
+<p>For questions about this privacy policy or your data, please use the contact form above.</p>
+
+<hr>
+<footer><em>This policy is provided for informational purposes and does not constitute legal advice. Consult a qualified attorney for advice specific to your jurisdiction.</em></footer>
+
+</body>
+</html>
