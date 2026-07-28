@@ -1,0 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Canonical: https://matteocrippa.it/.well-known/security.txt
+Contact: https://github.com/matteocrippa/security/advisories/new
+Preferred-Languages: en, it
+Expires: 2027-07-28T23:00:00.000Z
+-----BEGIN PGP SIGNATURE-----
+
+-----END PGP SIGNATURE-----
