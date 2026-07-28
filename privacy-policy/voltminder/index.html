@@ -110,7 +110,6 @@ code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px;font-size:.9em}
 </thead>
 <tbody>
 <tr><td>Cloudflare Workers (Hono/D1)</td><td>Vehicle profile catalog, community features, leaderboard</td><td>None by default; only opt-in leaderboard/community submissions</td></tr>
-<tr><td>Supabase (Postgres)</td><td>Read-only CDN for anonymous vehicle PID formulas</td><td>None — reads only public data</td></tr>
 <tr><td>Open Charge Map (<code>api.openchargemap.io</code>)</td><td>Find nearby charging stations</td><td>Your approximate coordinates (lat/lon), search radius</td></tr>
 <tr><td>Open-Meteo (<code>api.open-meteo.com</code>)</td><td>Ambient temperature and elevation for consumption forecasting</td><td>Coordinates, no identifiers</td></tr>
 <tr><td>Overpass API (OpenStreetMap)</td><td>Find POIs near charging stops</td><td>Coordinates of charging stop</td></tr>
@@ -185,7 +184,7 @@ code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px;font-size:.9em}
 <ul>
 <li><strong>iCloud Family Sharing:</strong> Data is stored in Apple's CloudKit infrastructure, which may be located in various regions worldwide. Apple's DPF certification governs these transfers.</li>
 <li><strong>EVNotify:</strong> Data is sent to EVNotify's servers (located in Germany per their documentation).</li>
-<li><strong>Cloudflare Workers / Supabase:</strong> Data may be processed in Cloudflare's or Supabase's global infrastructure.</li>
+<li><strong>Cloudflare Workers:</strong> Data may be processed in Cloudflare's global infrastructure.</li>
 </ul>
 <p>In all cases, international transfers are governed by the EU Standard Contractual Clauses (SCCs) or the Data Privacy Framework (DPF), as applicable to each provider.</p>
 
