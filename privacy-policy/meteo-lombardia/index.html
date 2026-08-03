@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Meteo Lombardia</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;max-width:720px;margin:0 auto;padding:2rem 1rem;color:#333}
+h1{font-size:1.5rem;margin-bottom:0.25rem}
+h2{font-size:1.2rem;margin-top:2rem}
+h3{font-size:1rem;margin-top:1.5rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+th,td{border:1px solid #ddd;padding:.5rem;text-align:left}
+th{background:#f5f5f5}
+hr{border:none;border-top:1px solid #ddd;margin:2rem 0}
+footer{font-size:.85rem;color:#666;margin-top:2rem}
+code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px;font-size:.9em}
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p><em>Last updated: August 3, 2026</em></p>
+
+<h2>Introduction</h2>
+<p>Meteo Lombardia (the "App") is developed and operated by Matteo Crippa ("we", "us", "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application, together with a detailed description of the third-party data the App presents.</p>
+<p>The App is an Italian-language weather companion for Lombardy. It turns raw meteorological data into conversational, human-friendly advice: a "Today" dashboard (current conditions, 12-hour outlook, gear suggestions, air quality and pollen), a "Weekend" escape recommender that scans curated Lombardy day-trip destinations, a live rain radar map, and local rain alerts. <strong>Privacy is a core design principle</strong> — the App has no account, no analytics, and no backend of ours; the only data it ever sends out is your approximate coordinates to the third-party services it queries for weather information.</p>
+<p>By using the App, you agree to the collection and use of information in accordance with this policy.</p>
+
+<h2>Information We Collect</h2>
+
+<h3>Location Data</h3>
+<p>The App uses your device's approximate location to fetch weather, air quality, and radar data for your area and to rank weekend destinations by distance. Location processing is minimal:</p>
+<ul>
+<li>Your coordinates are read with <strong>"When In Use"</strong> permission only, at roughly 1&nbsp;km accuracy</li>
+<li>Your coordinates are sent to Open-Meteo (forecast and air quality APIs) solely to request the weather for your position; they are <strong>not</strong> logged, stored, or associated with any identifier by us</li>
+<li>Your coordinates are also used locally by Apple Maps (MapKit) to center the radar map and by Apple's geocoder to display your town name</li>
+<li>No location data is ever sent to any server we operate (we operate none), and nothing is tracked in the background</li>
+</ul>
+<p>If you deny location permission, the App falls back to a default Lombardy location so core features still work.</p>
+
+<h3>Information We Do NOT Collect</h3>
+<p>We do <strong>not</strong> collect, store, or share:</p>
+<ul>
+<li>Name, email, phone number, or any contact information</li>
+<li>Device identifiers (IDFA, advertising ID, vendor ID, etc.)</li>
+<li>Browsing history or behavioral data</li>
+<li>Payment or financial information</li>
+<li>Account credentials — the App does not require an account, sign-in, or registration</li>
+<li>Photos, contacts, calendar, or media</li>
+<li>Health or biometric data</li>
+<li>Usage analytics, crash reports, or telemetry</li>
+</ul>
+
+<h2>How We Use Your Information</h2>
+<ul>
+<li>To fetch the weather forecast for your approximate location from Open-Meteo</li>
+<li>To fetch air quality and pollen data from the Open-Meteo air quality API (CAMS)</li>
+<li>To display your position on the radar map and rank nearby weekend destinations</li>
+<li>To schedule local rain notifications entirely on your device</li>
+</ul>
+
+<h2>Legal Basis for Processing</h2>
+<p>Under the General Data Protection Regulation (GDPR), we process your personal information on the following legal basis:</p>
+<ul>
+<li><strong>Consent</strong> — We access your device's location only after you grant explicit permission through the iOS location permissions dialog. You may withdraw consent at any time by changing location permissions in your device Settings.</li>
+</ul>
+<p>Your location is used only to obtain the information you asked the App for (the weather where you are). It is not retained, combined, or used for any other purpose. Since we operate no backend, no other legal basis for processing applies.</p>
+
+<h2>How We Share Your Information</h2>
+<p><strong>We do not sell, trade, or share your personal information with anyone.</strong> The App never sends data to any server we operate.</p>
+<ul>
+<li><strong>Third-Party Services:</strong> The only data that leaves your device is your approximate coordinates, sent directly to the weather data providers described below so they can return the data the App displays.</li>
+<li><strong>Legal Compliance:</strong> We may disclose information only if required to do so by law or in response to valid legal process. Since we collect no personal data on any backend, there is nothing meaningful to disclose.</li>
+<li><strong>Business Transfers:</strong> In the unlikely event of a merger, acquisition, or sale of assets, no user data would be transferred because no user data is collected.</li>
+</ul>
+
+<h2>Third-Party Services and Data Sources</h2>
+<p>The App is a thin client over public, third-party weather services. It does not generate its own weather data. Everything you see in the App originates from the providers below:</p>
+<table>
+<thead>
+<tr><th>Service</th><th>What the App Uses It For</th><th>Data Sent</th></tr>
+</thead>
+<tbody>
+<tr><td>Open-Meteo Forecast API (<code>api.open-meteo.com</code>)</td><td>All weather forecasts: the Today dashboard, the Weekend recommender, and the rain alerts. The App reads three numerical models through Open-Meteo: <strong>MeteoSwiss ICON</strong> (recommended, seamless), <strong>ItaliaMeteo / ARPAE ICON-2I</strong> (Italian regional model, ~2&nbsp;km resolution), and <strong>DWD ICON</strong> (German global model).</td><td>Approximate latitude/longitude + requested forecast parameters</td></tr>
+<tr><td>Open-Meteo Air Quality API (<code>air-quality-api.open-meteo.com</code>)</td><td>Air quality index (AQI), PM2.5/PM10, ozone, and pollen counts displayed in the Today dashboard. Data originates from the Copernicus Atmosphere Monitoring Service (CAMS).</td><td>Approximate latitude/longitude + requested air quality variables</td></tr>
+<tr><td>RainViewer (<code>api.rainviewer.com</code>, tiles via <code>tilecache.rainviewer.com</code>)</td><td>The live rain radar map and animation. RainViewer composites radar networks across Europe (including the MeteoSwiss Swiss radar network) and provides a free public, keyless API.</td><td>None (public catalog); standard HTTP headers only</td></tr>
+<tr><td>Apple MapKit</td><td>Basemap for the radar map and for displaying weekend destinations.</td><td>Your approximate coordinates (resolved on-device for map rendering)</td></tr>
+<tr><td>Apple Geocoder (CLGeocoder)</td><td>Reverse-geocodes your position into a friendly town name shown in the messages.</td><td>Your approximate coordinates (sent to Apple's geocoding service)</td></tr>
+<tr><td>Local Notifications</td><td>Rain alerts (up to 48&nbsp;h ahead) with a lead time you choose.</td><td>None — scheduling happens entirely on-device</td></tr>
+</tbody>
+</table>
+<p>Attribution and licenses of the data providers: <a href="https://open-meteo.com/en/license">Open-Meteo (CC BY 4.0, free for non-commercial use)</a>, <a href="https://www.rainviewer.com/terms.html">RainViewer</a>, <a href="https://data.geo.admin.ch">MeteoSwiss / geo.admin.ch</a>, <a href="https://ads.atmosphere.copernicus.eu/datasets/cams-europe-air-quality-forecasts">CAMS (Copernicus)</a>, and <a href="https://www.apple.com/legal/internet-services/maps/">Apple Maps</a>. The App is non-commercial.</p>
+
+<p><strong>The App contains no third-party analytics, crash reporting, advertising, or tracking SDKs.</strong> Specifically: no Firebase, no Sentry, no Crashlytics, no Google Analytics, no Amplitude, no Mixpanel, no AdMob, no social media SDKs, no payment processors, no remote push notifications (all notifications are local), and no remote configuration or A/B testing frameworks.</p>
+
+<h2>Data Disclaimer</h2>
+<p>Please read this section carefully.</p>
+<p><strong>Third-party data.</strong> All weather forecasts, radar imagery, air quality values, and pollen counts shown in the App are provided by third-party services (Open-Meteo, MeteoSwiss, ItaliaMeteo/ARPAE, DWD, CAMS, and RainViewer) and are <strong>model outputs — estimates, not measurements or guarantees</strong>. Meteorological models are probabilistic, update frequently, and can disagree with one another or with reality, especially at long ranges and in rapidly evolving conditions.</p>
+<p><strong>Automated advice.</strong> The conversational messages, gear suggestions (umbrella, jacket, sunglasses, and similar), and weekend destination recommendations are generated automatically by simple rule-based logic applied to the model data described above. They are <strong>not professional meteorological, health, or travel advice</strong>. They may differ from official forecasts or from what actually happens, and they should never be the only basis for decisions that affect your safety, health, or travel plans.</p>
+<p><strong>Air quality and pollen.</strong> Air quality index and pollen values are model estimates and may not reflect local conditions. They are informational only and must not be treated as medical or health advice.</p>
+<p><strong>Safety.</strong> The App is not a severe-weather warning service. In case of storms, floods, heatwaves, avalanches, or any potentially dangerous weather, always consult the official sources: <a href="https://www.arpalombardia.it">ARPA Lombardia</a>, <a href="https://www.meteoswiss.admin.ch">MeteoSwiss</a>, the <a href="https://www.protezionecivile.gov.it">Italian Civil Protection (Protezione Civile)</a>, and the local authorities. Mountain excursions in particular must be planned against official mountain-weather reports.</p>
+<p><strong>Limitation of liability.</strong> To the maximum extent permitted by applicable law, we are <strong>not liable</strong> for any loss or damage arising from your reliance on the data or the automated advice shown in the App, including decisions to postpone, change, or undertake activities based on it. The App is provided "as is" and without warranty of accuracy, completeness, or timeliness.</p>
+
+<h2>Cookies and Tracking Technologies</h2>
+<p>The App does not use cookies or any form of tracking technology. There are no web views, no cookie storage, and no fingerprinting mechanisms.</p>
+
+<h2>Data Security</h2>
+<p>All network requests to the data providers use HTTPS. Location is read at coarse (kilometer) accuracy, used only for the query, and never stored by us. Because the App operates no backend and stores no personal data, there is no server-side data that could be breached.</p>
+<ul>
+<li><strong>On-device processing:</strong> All advice generation, notification scheduling, and caching happen locally on your device</li>
+<li><strong>Encrypted network requests:</strong> All requests to third-party services use HTTPS</li>
+<li><strong>App Sandbox:</strong> iOS sandboxing prevents unauthorized access by other applications</li>
+<li><strong>Data minimization:</strong> Only the minimum data necessary (coarse coordinates) is sent, and only while the App is in use</li>
+</ul>
+<p>No system is 100% secure, but because no personal data leaves your device beyond a coarse coordinate query, the exposure is minimal.</p>
+
+<h2>Data Retention</h2>
+<p>All app data is stored locally on your device and is removed when you uninstall the App:</p>
+<table>
+<thead>
+<tr><th>Data</th><th>Storage</th><th>Retention</th></tr>
+</thead>
+<tbody>
+<tr><td>Last fetched forecast / air quality</td><td>Local cache on device</td><td>Replaced on next refresh; removed on uninstall</td></tr>
+<tr><td>Radar frame cache</td><td>Local cache on device</td><td>Evicted automatically (stale frames dropped); removed on uninstall</td></tr>
+<tr><td>App preferences (personality, model, alert settings)</td><td>UserDefaults</td><td>Until changed; removed on uninstall</td></tr>
+</tbody>
+</table>
+<p>We store nothing on any server, so there is nothing for us to retain or delete.</p>
+
+<h2>Your Rights</h2>
+<p>Under GDPR and applicable privacy laws, you have the following rights:</p>
+<ul>
+<li><strong>Withdraw consent</strong> — Change or revoke location permissions at any time in iOS Settings &gt; Privacy &amp; Security &gt; Location Services &gt; Meteo Lombardia. This is the primary control available to you.</li>
+<li><strong>Access, correction, deletion, portability</strong> — Since we store no personal data on our servers, there is no data to access, correct, delete, or export. All data resides on your device and is removed when you uninstall the App.</li>
+<li><strong>Restrict processing</strong> — Deny location permissions for the App in your device settings.</li>
+<li><strong>Object</strong> — You may object to processing by ceasing use of the App.</li>
+<li><strong>Lodge a complaint</strong> — You have the right to lodge a complaint with your local data protection authority if you believe your rights have been violated.</li>
+</ul>
+<p>To exercise any of these rights, contact us using the information below. We will respond within the timeframe required by applicable law.</p>
+
+<h2>International Data Transfers</h2>
+<p>When you use the App, your coarse coordinates are sent to the data providers described above. Open-Meteo and RainViewer operate international infrastructure, and Apple's geocoding and Maps services are operated by Apple. Each provider processes data under its own privacy policy and, where relevant, its Data Privacy Framework or Standard Contractual Clauses commitments. No personal data is otherwise transferred across borders.</p>
+
+<h2>Children's Privacy</h2>
+<p>The App is not intended for children under 13 (or the applicable age threshold in your jurisdiction). We do not knowingly collect any personal information from children — in fact, we do not collect personal information from any user regardless of age.</p>
+
+<h2>Apple Privacy Manifest</h2>
+<p>The App includes a <code>PrivacyInfo.xcprivacy</code> file that declares:</p>
+<ul>
+<li><strong>No tracking</strong> (<code>NSPrivacyTracking: false</code>)</li>
+<li><strong>No tracking domains</strong></li>
+<li><strong>Required API reasons only</strong> for the data accessed</li>
+</ul>
+
+<h2>Changes to This Privacy Policy</h2>
+<p>We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date. For material changes, we may provide additional notice through the application.</p>
+
+<h2>Governing Law</h2>
+<p>This policy is governed by the laws of Italy. The following privacy laws apply to our processing of your data:</p>
+<ul>
+<li>General Data Protection Regulation (GDPR) — European Union</li>
+<li>ePrivacy Directive — European Union</li>
+</ul>
+<p>Jurisdiction-specific rights (CCPA, CPRA, etc.) for users outside the EU are acknowledged; however, because we collect no personal data, no additional compliance measures are triggered.</p>
+
+<h2>Contact Us</h2>
+<ul>
+<li><strong>Web form:</strong> <a href="https://tally.so/r/lbXAE5">https://tally.so/r/lbXAE5</a></li>
+<li><strong>Hosted policy:</strong> <a href="https://matteocrippa.it/privacy-policy/meteo-lombardia/">https://matteocrippa.it/privacy-policy/meteo-lombardia/</a></li>
+<li><strong>Developer:</strong> Matteo Crippa</li>
+</ul>
+<p>For questions about this privacy policy, the data disclaimer, or the App, please use the contact form above.</p>
+
+</body>
+</html>
