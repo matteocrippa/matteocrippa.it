@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Cambio</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;max-width:720px;margin:0 auto;padding:2rem 1rem;color:#333}
+h1{font-size:1.5rem;margin-bottom:0.25rem}
+h2{font-size:1.2rem;margin-top:2rem}
+h3{font-size:1rem;margin-top:1.5rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+th,td{border:1px solid #ddd;padding:.5rem;text-align:left}
+th{background:#f5f5f5}
+hr{border:none;border-top:1px solid #ddd;margin:2rem 0}
+footer{font-size:.85rem;color:#666;margin-top:2rem}
+code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px;font-size:.9em}
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p><em>Last updated: September 4, 2026</em></p>
+
+<h2>Introduction</h2>
+<p>Cambio (the "App") is developed and operated by Matteo Crippa ("we", "us", "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+<p>The App is a currency converter that fetches live exchange rates from the European Central Bank. <strong>Privacy is a core design principle</strong> — the App requires no account, collects no personal data, and uses no analytics or advertising.</p>
+<p>By using the App, you agree to the collection and use of information in accordance with this policy.</p>
+
+<h2>Information We Collect</h2>
+<p><strong>We do not collect any personal information.</strong> The App is designed to be anonymous and minimal in its network usage:</p>
+<ul>
+<li><strong>No accounts:</strong> The App does not require sign-in, registration, or any account creation</li>
+<li><strong>No analytics:</strong> We do not collect usage statistics, crash reports, or telemetry</li>
+<li><strong>No advertising:</strong> The App contains no advertising SDKs</li>
+<li><strong>No location data:</strong> The App does not access your device's GPS or location services</li>
+</ul>
+
+<h3>Network Requests</h3>
+<p>The only network request made by the App is to fetch exchange rates from <a href="https://frankfurter.dev">Frankfurter</a> (api.frankfurter.dev). This request sends:</p>
+<ul>
+<li>The base currency code you selected (e.g., "USD", "EUR")</li>
+<li>A standard HTTPS request with your device's IP address (as with any web request)</li>
+</ul>
+<p>No personal identifiers, device information, or user data is sent with this request. See <a href="https://frankfurter.dev">Frankfurter's privacy policy</a> for details on their data handling.</p>
+
+<h3>Information We Do NOT Collect</h3>
+<p>We do <strong>not</strong> collect, store, or share:</p>
+<ul>
+<li>Name, email, phone number, or any contact information</li>
+<li>Device identifiers (IDFA, advertising ID, vendor ID, etc.)</li>
+<li>Location data or GPS coordinates</li>
+<li>Browsing history or behavioral data</li>
+<li>Payment or financial information</li>
+<li>Account credentials</li>
+<li>Photos, contacts, calendar, or media</li>
+<li>Health or biometric data</li>
+<li>Usage analytics, crash reports, or telemetry</li>
+</ul>
+
+<h2>How We Use Your Information</h2>
+<p>Since we collect no personal information, there is no personal information to use. Your selected currencies are stored locally on your device using iOS UserDefaults and are never transmitted to us.</p>
+
+<h2>Legal Basis for Processing</h2>
+<p>Under the General Data Protection Regulation (GDPR), we do not process any personal data. All app preferences (selected currencies) are stored locally on your device. The exchange rate API request is made to display live rates — no personal data is processed by us.</p>
+
+<h2>How We Share Your Information</h2>
+<p><strong>We do not share your personal information with anyone because we do not collect any.</strong></p>
+<ul>
+<li><strong>Service Providers:</strong> The App has no backend services. Exchange rate data is fetched directly from Frankfurter (api.frankfurter.dev).</li>
+<li><strong>Legal Compliance:</strong> In the unlikely event of a legal request, we have no data to disclose.</li>
+<li><strong>Business Transfers:</strong> In the unlikely event of a merger, acquisition, or sale of assets, no user data would be transferred because no user data is collected.</li>
+</ul>
+
+<h2>Third-Party Services</h2>
+<p>The App contains no third-party SDKs, frameworks, or services. Specifically:</p>
+<ul>
+<li>No analytics (Google Analytics, Firebase Analytics, Amplitude, Mixpanel, etc.)</li>
+<li>No crash reporting (Sentry, Crashlytics, etc.)</li>
+<li>No advertising (AdMob, etc.)</li>
+<li>No social media SDKs</li>
+<li>No payment processors</li>
+<li>No push notification services</li>
+<li>No remote configuration or A/B testing frameworks</li>
+</ul>
+<p><strong>Exchange Rate Data:</strong> Exchange rates are fetched from <a href="https://frankfurter.dev">Frankfurter</a>, a free and open API based on European Central Bank reference rates. Only the currency code you selected is sent as a query parameter.</p>
+
+<h2>Cookies and Tracking Technologies</h2>
+<p>The App does not use cookies or any form of tracking technology. There are no web views, no cookie storage, and no fingerprinting mechanisms.</p>
+
+<h2>Data Security</h2>
+<p>All app preferences (selected currencies) are stored locally on your device using iOS UserDefaults. The App makes a single network request to fetch exchange rates — no personal data is transmitted.</p>
+<ul>
+<li><strong>On-device storage:</strong> Your currency selections are stored locally</li>
+<li><strong>Minimal network:</strong> Only exchange rate data is fetched via HTTPS</li>
+<li><strong>App Sandbox:</strong> iOS sandboxing prevents unauthorized access by other applications</li>
+</ul>
+
+<h2>Data Retention</h2>
+<p>All app preferences are stored locally on your device and are removed when you uninstall the App:</p>
+<table>
+<thead>
+<tr><th>Data</th><th>Storage</th><th>Retention</th></tr>
+</thead>
+<tbody>
+<tr><td>Selected currencies</td><td>Local UserDefaults</td><td>Until changed or app is uninstalled</td></tr>
+<tr><td>Exchange rates</td><td>Memory only</td><td>Refreshed on each app launch</td></tr>
+</tbody>
+</table>
+
+<h2>Your Rights</h2>
+<p>Under GDPR and applicable privacy laws, you have the following rights:</p>
+<ul>
+<li><strong>Access, correction, deletion</strong> — All your preferences reside on your device. You can change them at any time through the app's currency picker or by uninstalling the app.</li>
+<li><strong>Restrict processing</strong> — Since no data is processed by us, there is nothing to restrict.</li>
+<li><strong>Object</strong> — You may object to processing by ceasing use of the App. No data will have been collected.</li>
+<li><strong>Lodge a complaint</strong> — You have the right to lodge a complaint with your local data protection authority if you believe your rights have been violated.</li>
+</ul>
+<p>To exercise any of these rights, contact us using the information below. We will respond within the timeframe required by applicable law.</p>
+
+<h2>International Data Transfers</h2>
+<p>Your selected currency code is sent to api.frankfurter.dev to fetch exchange rates. No personal data is transferred across borders.</p>
+
+<h2>Children's Privacy</h2>
+<p>The App is not intended for children under 13 (or the applicable age threshold in your jurisdiction). We do not knowingly collect any personal information from children — in fact, we do not collect personal information from any user regardless of age.</p>
+
+<h2>Changes to This Privacy Policy</h2>
+<p>We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date. For material changes, we may provide additional notice through the application.</p>
+
+<h2>Governing Law</h2>
+<p>This policy is governed by the laws of Italy. The following privacy laws apply to our processing of your data:</p>
+<ul>
+<li>General Data Protection Regulation (GDPR) — European Union</li>
+<li>ePrivacy Directive — European Union</li>
+</ul>
+
+<h2>Contact Us</h2>
+<ul>
+<li><strong>Web form:</strong> <a href="https://tally.so/r/lbXAE5">https://tally.so/r/lbXAE5</a></li>
+<li><strong>Hosted policy:</strong> <a href="https://matteocrippa.it/privacy-policy/cambio/">https://matteocrippa.it/privacy-policy/cambio/</a></li>
+<li><strong>Developer:</strong> Matteo Crippa</li>
+</ul>
+<p>For questions about this privacy policy or your data, please use the contact form above.</p>
+
+</body>
+</html>
