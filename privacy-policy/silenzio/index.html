@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Silenzio</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;max-width:720px;margin:0 auto;padding:2rem 1rem;color:#333}
+h1{font-size:1.5rem;margin-bottom:0.25rem}
+h2{font-size:1.2rem;margin-top:2rem}
+h3{font-size:1rem;margin-top:1.5rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+th,td{border:1px solid #ddd;padding:.5rem;text-align:left}
+th{background:#f5f5f5}
+hr{border:none;border-top:1px solid #ddd;margin:2rem 0}
+footer{font-size:.85rem;color:#666;margin-top:2rem}
+code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px;font-size:.9em}
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p><em>Last updated: September 22, 2026</em></p>
+
+<h2>Introduction</h2>
+<p>Silenzio (the "App") is developed and operated by Matteo Crippa ("we", "us", "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+<p>The App identifies and silences spam callers using Apple's Call Directory extension together with a community-maintained blocklist of phone numbers reported as spam. <strong>Privacy is a core design principle</strong> — the App requires no account, collects no personal data, and checks incoming calls entirely on your device.</p>
+<p>By using the App, you agree to the collection and use of information in accordance with this policy.</p>
+
+<h2>Information We Collect</h2>
+<p>We do not collect personal information such as your name, email address, or phone number, and the App requires no account, sign-in, or registration.</p>
+
+<h3>Information Stored on Your Device</h3>
+<p>The App stores the following data locally, in its own sandbox and in a shared app group container used by the Call Directory extension:</p>
+<ul>
+<li><strong>Community blocklist:</strong> The list of phone numbers reported as spam, downloaded from our API and stored in a local SQLite database</li>
+<li><strong>Pending reports:</strong> Reports you submit are stored locally before they are synchronized</li>
+<li><strong>Session identifier:</strong> A randomly generated identifier (a UUID) created on your device the first time you use the App, used only to prevent duplicate reports and to rate-limit abuse. It is not linked to your name, email, Apple ID, or any device identifier (see below)</li>
+<li><strong>App preferences:</strong> Your settings, such as whether the optional contacts whitelist is enabled (stored in UserDefaults)</li>
+</ul>
+<p>All of this local data is removed when you delete the App.</p>
+
+<h3>Information Sent to Our Server</h3>
+<p>When you report a phone number as spam, the App sends the following to our API (hosted on Cloudflare Workers):</p>
+<table>
+<thead>
+<tr><th>Data</th><th>Purpose</th></tr>
+</thead>
+<tbody>
+<tr><td>Reported phone number</td><td>Added to the community blocklist so other users are protected</td></tr>
+<tr><td>Random session identifier (UUID)</td><td>Prevent duplicate reports for the same number and rate-limit abuse</td></tr>
+<tr><td>Report timestamp</td><td>Aggregation and confidence scoring</td></tr>
+<tr><td>Confidence value</td><td>Ranking and display of the blocklist</td></tr>
+</tbody>
+</table>
+<p>The session identifier is generated randomly on your device, is <strong>not</strong> derived from any hardware or advertising identifier, and cannot be used by us to identify you. It is deleted from your device when you uninstall the App. Reports are pseudonymous: we cannot link a report back to your identity.</p>
+<p>We do <strong>not</strong> store your IP address, your contacts, your call history, or any information about who calls you, when they call, or how often.</p>
+
+<h3>Contacts (Optional)</h3>
+<p>If you enable the optional contacts whitelist, the App reads the phone numbers in your address book to make sure the people you know are never blocked. This happens <strong>entirely on your device</strong>, inside the Call Directory extension:</p>
+<ul>
+<li>Only phone numbers are read — never names, emails, or other contact fields</li>
+<li>Contact numbers are <strong>never transmitted</strong> to us or any third party, and are not stored in our blocklist</li>
+<li>The whitelist is optional and off by default; you can disable it at any time in Settings or by revoking Contacts permission in iOS Settings</li>
+<li>You can deny Contacts access and the App remains fully functional</li>
+</ul>
+
+<h3>Information We Do NOT Collect</h3>
+<p>We do <strong>not</strong> collect, store, or share:</p>
+<ul>
+<li>Name, email, phone number, or any contact information belonging to you</li>
+<li>Accounts or credentials — the App does not require sign-in or registration</li>
+<li>Device identifiers (IDFA, advertising ID, vendor ID, etc.)</li>
+<li>Your IP address (we do not log or store it)</li>
+<li>Location data or GPS coordinates</li>
+<li>Call logs, or any information about who you call or who calls you</li>
+<li>Your contacts (except the optional, on-device whitelist described above)</li>
+<li>Browsing history or behavioral data</li>
+<li>Payment or financial information — the App is free</li>
+<li>Photos, media, health, or biometric data</li>
+<li>Usage analytics, crash reports, or telemetry</li>
+</ul>
+
+<h2>How the Call Directory Extension Works</h2>
+<p>Apple manages the Call Directory extension system. When a call comes in, iOS checks the number against our local blocklist <strong>on your device</strong>:</p>
+<ul>
+<li>The Call Directory extension reads the local SQLite blocklist shared through an app group container</li>
+<li>No network access is needed or performed during calls — the incoming number never leaves your phone</li>
+<li>We never learn which numbers called you, how many calls you received, or which entries were matched</li>
+</ul>
+
+<h2>How We Use Your Information</h2>
+<ul>
+<li>To operate and improve the community blocklist of spam numbers</li>
+<li>To aggregate user reports and compute a confidence score per number</li>
+<li>To prevent duplicate reports for the same number</li>
+<li>To rate-limit and mitigate abuse of our API</li>
+<li>To enable the optional contacts whitelist on your device</li>
+</ul>
+<p>We do not use your information for advertising, profiling, marketing, or any purpose unrelated to the App's functionality. We do not sell your information.</p>
+
+<h2>Legal Basis for Processing</h2>
+<p>Under the General Data Protection Regulation (GDPR), we rely on the following legal bases:</p>
+<ul>
+<li><strong>Legitimate interest</strong> (Art. 6(1)(f) GDPR) — Operating the community blocklist to protect users from spam calls. The reported numbers are those of the spam callers, not of our users, and reports are pseudonymous.</li>
+<li><strong>Consent</strong> (Art. 6(1)(a) GDPR) — We access your Contacts only after you grant explicit permission through the iOS permissions dialog and enable the optional whitelist. You may withdraw consent at any time by disabling the whitelist or revoking permission in iOS Settings.</li>
+</ul>
+
+<h2>How We Share Your Information</h2>
+<p><strong>We do not sell, rent, or trade your personal information, and no personal data is collected.</strong> The only data leaving your device is the pseudonymous report data described above.</p>
+
+<h3>Third-Party Services</h3>
+<table>
+<thead>
+<tr><th>Service</th><th>Purpose</th><th>Data Involved</th></tr>
+</thead>
+<tbody>
+<tr><td>Cloudflare Workers &amp; D1</td><td>Hosting the API and the community blocklist database</td><td>Reported phone numbers, random session identifiers, timestamps</td></tr>
+<tr><td>Apple Call Directory</td><td>On-device call identification and blocking</td><td>None — processed locally by iOS on your device</td></tr>
+</tbody>
+</table>
+<p><strong>The App contains no third-party analytics, crash reporting, advertising, or tracking SDKs.</strong> Specifically: no Firebase, no Sentry, no Crashlytics, no Google Analytics, no Amplitude, no Mixpanel, no AdMob, no social media SDKs, no payment processors, and no remote configuration or A/B testing frameworks.</p>
+<p>We may disclose information only if required to do so by law or in response to valid legal process. In the unlikely event of a merger, acquisition, or sale of assets, no personal user data would be transferred because no personal user data is collected.</p>
+
+<h2>Cookies and Tracking Technologies</h2>
+<p>The App does not use cookies or any form of tracking technology. There are no web views, no cookie storage, no advertising identifiers, and no fingerprinting mechanisms.</p>
+
+<h2>Data Security</h2>
+<p>We implement the following measures to protect your information:</p>
+<ul>
+<li><strong>On-device processing:</strong> Incoming calls are checked against the local blocklist and Contacts are read locally</li>
+<li><strong>Encrypted network requests:</strong> All communication with our API uses HTTPS</li>
+<li><strong>App Sandbox &amp; App Group:</strong> Data is confined to the App's sandbox and a shared app group container accessible only to the App and its Call Directory extension</li>
+<li><strong>Data minimization:</strong> Only the minimum data necessary for each feature is stored or sent</li>
+<li><strong>No personal data at rest on our servers:</strong> Our database holds spam numbers and pseudonymous session identifiers, not personal data</li>
+</ul>
+<p>No system is 100% secure, but because no personal data leaves your device, there is no personal data on our servers to breach.</p>
+
+<h2>Data Retention</h2>
+<table>
+<thead>
+<tr><th>Data</th><th>Storage</th><th>Retention</th></tr>
+</thead>
+<tbody>
+<tr><td>Community blocklist (reported numbers)</td><td>Cloudflare D1</td><td>Retained until removal is requested via the contact form below</td></tr>
+<tr><td>Report session identifiers</td><td>Cloudflare D1</td><td>Retained with the report for duplicate prevention; removed on request</td></tr>
+<tr><td>Local blocklist</td><td>On-device SQLite</td><td>Until you clear it in Settings or uninstall the App</td></tr>
+<tr><td>Pending reports</td><td>On-device</td><td>Until synchronized</td></tr>
+<tr><td>Session identifier</td><td>On-device (app group UserDefaults)</td><td>Until you uninstall the App</td></tr>
+<tr><td>App preferences</td><td>UserDefaults</td><td>Until changed or the App is deleted</td></tr>
+</tbody>
+</table>
+
+<h2>Your Rights</h2>
+<p>Under GDPR and applicable privacy laws, you have the following rights:</p>
+<ul>
+<li><strong>Access, correction, deletion, portability</strong> — All data about you resides on your device. You can view it in the App and delete it via Settings &gt; Clear Database, or by uninstalling the App. For reported numbers or session identifiers held on our servers, contact us using the form below</li>
+<li><strong>Withdraw consent</strong> — Disable the contacts whitelist in Settings or revoke Contacts permission in iOS Settings &gt; Privacy &amp; Security &gt; Contacts</li>
+<li><strong>Restrict processing</strong> — You may use the App without reporting any number; the App remains functional</li>
+<li><strong>Object</strong> — You may object to processing by ceasing use of the App</li>
+<li><strong>Lodge a complaint</strong> — You have the right to lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali) or your local supervisory authority</li>
+</ul>
+<p>To exercise any of these rights, contact us using the information below. We will respond within the timeframe required by applicable law.</p>
+
+<h2>International Data Transfers</h2>
+<p>Report data is processed on Cloudflare's global infrastructure and may therefore be stored or processed outside the European Economic Area. These transfers are governed by the EU Standard Contractual Clauses (SCCs) and/or the EU-US Data Privacy Framework (DPF), as applicable to Cloudflare. The data transferred is pseudonymous and contains no personal data.</p>
+
+<h2>Children's Privacy</h2>
+<p>The App is not intended for children under 13 (or the applicable age threshold in your jurisdiction). We do not knowingly collect any personal information from children — in fact, we do not collect personal information from any user regardless of age.</p>
+
+<h2>Changes to This Privacy Policy</h2>
+<p>We may update this policy from time to time. Changes will be posted on this page with an updated "Last updated" date. For material changes, we may provide additional notice through the application.</p>
+
+<h2>Governing Law</h2>
+<p>This policy is governed by the laws of Italy. The following privacy laws apply to our processing of your data:</p>
+<ul>
+<li>General Data Protection Regulation (GDPR) — European Union</li>
+<li>ePrivacy Directive — European Union</li>
+</ul>
+<p>Jurisdiction-specific rights (CCPA, CPRA, etc.) for users outside the EU are acknowledged; however, because we collect no personal data and do not sell data, no additional compliance measures are triggered.</p>
+
+<h2>Contact Us</h2>
+<ul>
+<li><strong>Web form:</strong> <a href="https://tally.so/r/lbXAE5">https://tally.so/r/lbXAE5</a></li>
+<li><strong>Hosted policy:</strong> <a href="https://matteocrippa.it/privacy-policy/silenzio/">https://matteocrippa.it/privacy-policy/silenzio/</a></li>
+<li><strong>Developer:</strong> Matteo Crippa</li>
+</ul>
+<p>For questions about this privacy policy or your data, please use the contact form above.</p>
+
+</body>
+</html>
